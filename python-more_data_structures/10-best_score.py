@@ -1,14 +1,23 @@
 #!/usr/bin/python3
-def best_score(a_dictionary):
-    if not a_dictionary:
-        return None
+def roman_to_int(roman_string):
+    roman = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    }
 
-    max_value = None
-    best_key = None
-
-    for key, value in a_dictionary.items():
-        if max_value is None or value > max_value:
-            max_value = value
-            best_key = key
-
-    return best_key
+    total = 0
+    if type(roman_string) is not str:
+        return 0
+    for index, char in enumerate(roman_string):
+        if index == len(roman_string) - 1:
+            total += roman[char]
+        elif roman[char] < roman[roman_string[index + 1]]:
+            total -= roman[char]
+        else:
+            total += roman[char]
+    return total
