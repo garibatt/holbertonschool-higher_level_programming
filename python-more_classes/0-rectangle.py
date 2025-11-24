@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-'''
-this line creates class
-'''
+"""
+This module creates a Rectangle class.
+"""
+
 
 class Rectangle:
-    '''
-    this line creates empty class
-    '''
+    """
+    An empty Rectangle class.
+    """
     pass
