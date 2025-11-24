@@ -3,10 +3,10 @@
 
 
 class Rectangle:
-    """This is a Square class."""
+    """This is a Rectangle class."""
 
     def __init__(self, width=0, height=0):
-        """Initialize the square with optional size."""
+        """Initialize the rectangle with optional width and height."""
         self.width = width
         self.height = height
 
@@ -19,16 +19,16 @@ class Rectangle:
     def width(self, value):
         """Set width with validation."""
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
         """Retrieve height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """Set height with validation"""
