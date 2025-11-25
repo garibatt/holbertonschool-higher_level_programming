@@ -50,9 +50,9 @@ class Rectangle:
         
     def __str__(sefl):
         """returns str"""
-        result = ""
+        str = ""
         if self.__width == 0 or self.__height == 0:
-            return result
+            return str
         for _ in range(self.__height):
-            result = print("#" * self.__width)
-            return result
+            str = print("#" * self.__width)
+            return str
