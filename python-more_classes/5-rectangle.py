@@ -3,21 +3,21 @@
 
 
 class Rectangle:
-    """rectangle class"""
-    
+    """Rectangle class."""
+
     def __init__(self, width=0, height=0):
-        """Initialize Rectangle """
+        """Initialize Rectangle."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Getter"""
+        """Get the width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Setter"""
+        """Set the width."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter"""
+        """Get the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Setter"""
+        """Set the height."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -39,24 +39,27 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """return area"""
+        """Return the area of the rectangle."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """return perimeter """
+        """Return the perimeter of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """return str"""
+        """Return the string representation with '#' characters."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        string = "#" * self.__width
-        return "\n".join([string] * self.__height)
+        line = "#" * self.__width
+        return "\n".join([line] * self.__height)
 
     def __repr__(self):
-        return (f"Rectangle({self.__width}, {self.__height})")
-    
+        """Return the official string representation."""
+        return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
+        """Print a message when an instance is deleted."""
         print("Bye rectangle...")
+
