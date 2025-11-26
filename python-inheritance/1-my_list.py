@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-document
+This module defines a MyList class that inherits from list.
 """
+
+
 class MyList(list):
     """
-    this line creates list
+    Represents a list that can be printed in sorted order.
     """
+
     def print_sorted(self):
         """
-        this line print list
+        Prints the list in ascending sorted order.
         """
         print(sorted(self))
