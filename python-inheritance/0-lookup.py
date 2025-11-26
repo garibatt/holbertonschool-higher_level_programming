@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """
-this is script for return mtehods and attributes
+This script returns the list of available attributes and methods of an object.
 """
+
+
 def lookup(obj):
     """
-    this is return
+    Return a list of available attributes and methods of an object.
     """
     return dir(obj)
