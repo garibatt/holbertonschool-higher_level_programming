@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""this is document"""
+"""This is the BaseGeometry class module."""
 
 
 class BaseGeometry:
-    """this is also document"""
-    pass
-    
+    """BaseGeometry class."""
+
     def area(self):
+        """Raise an exception because area is not implemented."""
         raise Exception("area() is not implemented")
