@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-def is_kind_of_class(obj, a_class):
-    return isinstance(obj, a_class:)
+""" this is document"""
 
+
+def is_kind_of_class(obj, a_class):
+    """this is function"""
+    return isinstance(obj, a_class:)
