@@ -10,7 +10,6 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
     """this is document"""
 
-        
     def integer_validator(self, name, value):
         if type(value) not int:
             raise TypeError("{} must be integer".format(name))
