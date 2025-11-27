@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""This is the BaseGeometry class module"""
-
+"""this is document"""
 
 class BaseGeometry:
-    """BaseGeometry class"""
+    """this is document"""
 
     def area(self):
         raise Exception("area() is not implemented")
     """this is document"""
-
+    
     def integer_validator(self, name, value):
         if type(value) not int:
             raise TypeError("{} must be integer".format(name))
