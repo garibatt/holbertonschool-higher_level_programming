@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"this is document"
+"""this is document"""
 
 
 class BaseGeometry:
