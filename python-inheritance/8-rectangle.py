@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""This module defines the Rectangle class, which inherits from BaseGeometry."""
-
+"""this is document"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class, inherits from BaseGeometry."""
+    """this is document"""
 
     def __init__(self, width, height):
-        """Initialize a Rectangle with width and height."""
+        """this is document"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
