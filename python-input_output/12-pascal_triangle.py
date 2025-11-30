@@ -1,26 +1,24 @@
+#!/usr/bin/python3
 """
+Function that returns Pascal's triangle of n
+"""
+
+
 def pascal_triangle(n):
-    l1 = [1,1]
+    """Return a list of lists representing Pascal's triangle."""
     if n <= 0:
         return []
-    for i in range(2,n):
-   
 
+    triangle = [[1]]  # first row
 
-#!/usr/bin/python3
+    for i in range(1, n):
+        prev = triangle[-1]
+        new_row = [1]
 
-12-main
+        for j in range(1, len(prev)):
+            new_row.append(prev[j - 1] + prev[j])
 
-pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
+        new_row.append(1)
+        triangle.append(new_row)
 
-def print_triangle(triangle):
-    
-    Print the triangle
-    
-    for row in triangle:
-        print("[{}]".format(",".join([str(x) for x in row])))
-
-
-if __name__ == "__main__":
-    print_triangle(pascal_triangle(5))
-    """
+    return triangle
