@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""this is comment line"""
+"""This module fetches status from a URL and prints it."""
+import urllib.request
 
-from urllib import request
+if __name__ == "__main__":
+    url = "https://intranet.hbtn.io/status"
 
-url = "https://intranet.hbtn.io/status"
-
-with request.urlopen(url) as response:
-    body = response.read()
-
-    print("Body response:")
-    print("    - type:", type(body))
-    print("    - content:", body)
-    print("    - utf8 content:", body.decode("utf-8"))
-
+    with urllib.request.urlopen(url) as response:
+        r = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(r)))
+        print("\t- content: {}".format(r))
+        print("\t- utf8 content: {}".format(r.decode('utf-8')))
