@@ -1,19 +1,20 @@
 #!/usr/bin/python3
-"""POST request with urllib"""
-import sys
-import urllib.parse
+"""Sends a POST request with an email parameter and displays the response."""
+
 import urllib.request
+import urllib.parse
+import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
 
-    data = {"email": email}
+    # Encode the POST data
+    data = urllib.parse.urlencode({"email": email}).encode("utf-8")
 
-    endata = urllib.parse.urlencode(data).encode("utf-8")
+    # Send POST request
+    with urllib.request.urlopen(url, data) as response:
+        body = response.read()
 
-    req = urllib.request.Request(url, data=endata)
-
-    with urllib.request.urlopen(req) as f:
-        body = f.read().decode("utf-8")
-        print(body)
+    # Decode and print response body
+    print(body.decode("utf-8"))
