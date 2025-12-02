@@ -1,13 +1,10 @@
 #!/usr/bin/python3
+import sys
+import urllib.request
 
-from urllib import request
-"""this is documents"""
-url = "https://intranet.hbtn.io/status"
+if __name__ = "__main__":
+    url = sys.argv[1]
 
-with request.urlopen(url) as response:
-    body = response.read()
-
-    print("Body response:")
-    print("    - type:", type(body))
-    print("    - content:", body)
-    print("    - utf8 content:", body.decode("utf-8"))
+    with urllib.request.urlopen(url) as f:
+        header = f.headers
+        print(header.get("X-Request-Id"))
