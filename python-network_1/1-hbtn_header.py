@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""this is document"""
 import sys
 import urllib.request
 
